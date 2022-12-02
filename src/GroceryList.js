@@ -17,10 +17,10 @@ export class GroceryList extends Component {
         this.setState({buttonDisabled: false});
     }
 
-    addItem(input) {
+    addItem(item) {
         let listArray = this.state.groceryList;
-        if (input.trim() !== '') {
-            listArray.push(input);
+        if (item.trim() !== '') {
+            listArray.push(item);
             this.setState({groceryList: listArray, userInput: ''});
         } else {
             this.setState({buttonDisabled: true});
